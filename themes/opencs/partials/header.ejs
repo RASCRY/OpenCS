@@ -1,0 +1,81 @@
+<div class="main">
+    <div class="header">
+        <div class="branding-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="logo">
+                            <h2><%= company_name%></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-8 header-col-right">
+                        <div class="header-group">
+                            <div class="dropdown">
+                                <button class="btn btn-theme dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Language
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?locale=en">English</a>
+                                    <a class="dropdown-item" href="?locale=is">Íslenska</a>
+                                    <a class="dropdown-item" href="?locale=no">Norsk</a>
+                                    <a class="dropdown-item" href="?locale=mk">Македонски</a>
+                                    <a class="dropdown-item" href="?locale=pt">Portugese</a>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a href="/cart?locale=<%= locale%>" class="btn btn-theme">View cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-area">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-theme">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Store
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#all">Browse all</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#minecraft">Minecraft</a>
+                                    <a class="dropdown-item" href="#web">Web</a>
+                                    <a class="dropdown-item" href="#cloud">Cloud</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="form-inline my-1 my-lg-0">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Account
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="login.html">Log-in</a>
+                                        <a class="dropdown-item" href="register.html">Register</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="reset.html">Forgot password</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>

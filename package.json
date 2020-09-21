@@ -1,0 +1,32 @@
+{
+  "name": "opencs",
+  "version": "1.0.0",
+  "description": "OpenCS is a complete, open source and free billing solution that intergrates with existing software like Pterodactyl, Multicraft, cPanel, VestaCP, ISPConfig and many more. With help from the community many more intergrations will be supported over time with 3d party plugins.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RASCRY/OpenCS.git"
+  },
+  "author": "RASCRY Foundation Limited P.T.C.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RASCRY/OpenCS/issues"
+  },
+  "homepage": "https://github.com/RASCRY/OpenCS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

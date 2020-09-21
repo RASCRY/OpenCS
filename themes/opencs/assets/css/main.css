@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    min-height: 90%;
+}
+
+.branding-area {
+    padding: 20px 0 20px 0;
+    vertical-align: middle;
+}
+
+.link-silent {
+    color: unset;
+}
+
+.link-silent:hover {
+    color: unset;
+    text-decoration: unset;
+}
+
+.header-col-right {
+    text-align: right;
+}
+
+.footer-logo {
+    text-align: right;
+}
+
+.ul-clean {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.thead-theme {
+    background-color: rgba(0,0,0,.03);
+    border: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-col-right {
+        text-align: left;
+    }
+    .footer-logo {
+        text-align: left;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% {  transform: rotate(360deg); }
+}
+
+.spin {
+    animation: 0.8s spin infinite;
+    animation-timing-function: linear;
+}
+
+.dropdown-menu {
+    border-radius: 0px;
+}
+
+.bg-theme {
+    background-color: #125c86;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.card {
+    border-radius: 0
+}
+
+.card * {
+    border-radius: 0;
+}
+
+.display-block {
+    display: block;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.collapse-button {
+    border: none;
+    background-color: unset;
+    transition: box-shadow 0.10s;
+}
+
+.collapse-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.collapse-button i::before {
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f078";
+}
+
+.collapse-button.collapsed i::before {
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f077";
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn.bg-theme:hover {
+    background-color: #0c415f;
+}
+
+.bg-theme-light {
+    background-color: #2498bb;
+}
+.btn.bg-theme-light:hover {
+    background-color: #1c7591;
+}
+
+.btn.btn-theme {
+    background-color: #125c86;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn.btn-theme:hover {
+    background-color: #0c415f;
+}
+
+div.button {
+    display: inline-block;
+}
+
+div.dropdown {
+    display: inline-block;
+}
+
+.centre-container {
+    height: 100%;
+    position: relative;
+}
+  
+.vertical-centre {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hero {
+    background-color: #0d4363;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero .vertical-centre h1 {
+        font-size: 2rem;
+    }
+}
+
+.hero-big {
+    height: 300px;
+}
+
+.hero-small {
+    height: 150px;
+}
+
+.action-strip {
+    color: white;
+}
+
+.action-strip .action-title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.action-strip h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.action-strip a {
+    margin: 0;
+    color: white;
+}
+
+.action-strip a:hover > div {
+    background-color: #1c7d9b;
+}
+
+.action-strip p {
+    margin: 0;
+    color: white;
+}
+
+.action-strip .action-strip-button {
+    text-align: center;
+    transition: background-color 0.25s;
+    padding: 15px 15px 15px 15px;
+}
+
+footer {
+    background-color: rgba(243, 243, 243, 0.867);
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgb(175, 175, 175);
+}
+
+footer p {
+    color: rgb(99, 99, 99);
+    font-size: 0.9rem;
+}
+
+.category {
+    background-color: rgba(243, 243, 243, 0.867);
+    border: 1px solid rgb(175, 175, 175);
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.category .buy-button {
+    display: block;
+    margin-top: 15px;
+}
+
+.opencs-breadcrumbs {
+    margin: 30px 0 0 0;
+}
+
+.opencs-breadcrumbs .opencs-breadcrumb {
+    color: rgb(97, 97, 97);
+}
+
+.opencs-breadcrumbs-container {
+    border-bottom: 1px dotted black;
+}
+
+.login-form {
+    padding: 30px 0 30px 0;
+}
+
+.login-form-element {
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+.login-form .login-buttons {
+    text-align: center;
+}

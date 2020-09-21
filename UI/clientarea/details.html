@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../../themes/opencs/assets/css/main.css">
+        <link rel="stylesheet" href="../../themes/opencs/assets/css/clientarea.css">
+        <link rel="stylesheet" href="../../themes/opencs/assets/css/intlTelInput.min.css">
+        <title>Client area - {{company_name}}</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div class="branding-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="logo">
+                                    <h2>OpenCS</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-8 header-col-right">
+                                <div class="header-group">
+                                    <div class="dropdown">
+                                        <button class="btn btn-theme dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Language
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">English</a>
+                                            <a class="dropdown-item" href="#">Íslenska</a>
+                                            <a class="dropdown-item" href="#">Norsk</a>
+                                            <a class="dropdown-item" href="#">Macedonian</a>
+                                            <a class="dropdown-item" href="#">Portugese</a>
+                                        </div>
+                                    </div>
+                                    <div class="button">
+                                        <a href="cart" class="btn btn-theme">View cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-area">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-theme">
+                        <div class="container">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="clientarea.html">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Services
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Your services</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Order a service</a>
+                                            <a class="dropdown-item" href="#">Addons</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="form-inline my-1 my-lg-0">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item dropdown active">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Hello, {{account}}
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Manage account</a>
+                                                <a class="dropdown-item" href="#">Change password</a>
+                                                <a class="dropdown-item" href="#">Billing details</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Log out</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="hero centre-container hero-small">
+                <div class="vertical-centre">
+                    <h1>Manage account</h1>
+                </div>
+            </div>
+            <div class="opencs-breadcrumbs">
+                <div class="container">
+                    <div class="opencs-breadcrumbs-container">
+                        <p><a class="opencs-breadcrumb" href="clientarea.html">Client area</a> / <a class="opencs-breadcrumb" href="manage.html">Manage service</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="account-home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="card sidecard">
+                                    <div class="card-header">
+                                        <h5 class="card-title no-margin">Account <button class="float-right collapse-button" data-toggle="collapse" data-target="#info"><i class="fas"></i></button></h5>
+                                    </div>
+                                    <div class="card-body shortcuts collapse show" id="info">
+                                        <a class="shortcut-button shortcut-active" href="details.html#personal-information">Information</a>
+                                        <a class="shortcut-button" href="details.html#change-password">Change password</a>
+                                        <a class="shortcut-button" href="details.html#billing-address">Billing address</a>
+                                        <a class="shortcut-button" href="#">Billing details</a>
+                                        <a class="shortcut-button" href="#">Security</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <form class="update-form" action="auth/register" method="POST">
+                                    <h4>Personal information</h4>
+                                    <hr>
+                                    <div class="form-row" id="personal-information">
+                                        <div class="col">
+                                            <label><strong>Full name:</strong></label>
+                                            <input type="text" name="name" placeholder="John Doe" class="form-control">
+                                        </div>
+                                        <div class="col">
+                                            <label><strong>Email address:</strong></label>
+                                            <input type="email" name="Email" placeholder="john@example.com" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label><strong>Phone number:</strong></label>
+                                            <input type="tel" name="phone" id="phone" placeholder="000 0000 0000" class="form-control">
+                                        </div>
+                                        <div class="col">
+            
+                                        </div>
+                                    </div>
+                                    <h4>Billing address</h4>
+                                    <hr>
+                                    <div class="form-row" id="billing-address">
+                                        <div class="col">
+                                            <label><strong>Company name</strong></label>
+                                            <input type="text" name="company" placeholder="Example S.A.R.L." class="form-control">
+                                        </div>
+                                        <div class="col">
+                                            <label><strong>Street address</strong></label>
+                                            <input type="text" name="address1" placeholder="1st example st." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label><strong>Street address 2</strong></label>
+                                            <input type="text" name="address2" placeholder="2nd example st." class="form-control">
+                                        </div>
+                                        <div class="col">
+                                            <label><strong>City</strong></label>
+                                            <input type="text" name="city" placeholder="Example city" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label><strong>Postcode</strong></label>
+                                            <input type="text" name="postcode" placeholder="1BZ2" class="form-control">
+                                        </div>
+                                        <div class="col"></div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label><strong>Country</strong></label>
+                                            <select class="crs-country form-control" name="country" id="country" data-region-id="region"></select>
+                                        </div>
+                                        <div class="col">
+                                            <label><strong>State / region</strong></label>
+                                            <select class="form-control" id="region" name="region"></select>
+                                        </div>
+                                    </div>
+                                    <h4>Change password</h4>
+                                    <hr>
+                                    <div class="form-row" id="change-password">
+                                        <div class="col">
+                                            <label><strong>Password</strong></label>
+                                            <input type="password" name="password" placeholder="Password" class="form-control" id="pw">
+                                        </div>
+                                        <div class="col">
+                                            <label><strong>Confirm password</strong></label>
+                                            <input type="password" name="confirm-password" placeholder="Confirm password" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label><strong>Password strength</strong></label>
+                                            <div id="progress-container"></div>
+                                        </div>
+                                    </div>
+                                    <div class="login-buttons">
+                                        <button type="submit" class="btn btn-theme">Create account</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <p>Copyright &copy; 2020 Rascry Limited P.T.C.<br>Registered in the Federal Republic of Arctischia.<br><a href="https://opencs.rascry.org" target="_blank">Website</a> &bull; <a href="mailto:info@rascry.org" target="_blank">info@rascry.org</a></p>
+                    </div>
+                    <div class="col-md footer-logo">
+                        <a href="https://www.opencs.rascry.org/" target="_blank"><img src="../../themes/opencs/assets/img/logo.png" width="100"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="../../themes/opencs/assets/js/jshref.js"></script>
+        <script src="../../themes/opencs/assets/js/intlTelInput.min.js"></script>
+        <script src="../../themes/opencs/assets/js/pw-score.js"></script>
+        <script src="../../themes/opencs/assets/js/password-score-options.js"></script>
+        <script src="../../themes/opencs/assets/js/bootstrap-strength-meter.js"></script>
+        <script>
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "is"
+            });
+            //var number = iti.getNumber();
+            $(document).ready(function() {
+            $('#pw').strengthMeter('progressBar', {
+                    container: $('#progress-container'),
+                    base: 80,
+                    hierarchy: {
+                        '0': 'progress-bar-danger',
+                        '25': 'progress-bar-warning',
+                        '50': 'progress-bar-success'
+                    },
+                    passwordScore: {
+                    options: [],
+                    append: true
+                }
+            });
+            });
+
+        </script>
+        <script src="../../themes/opencs/assets/js/countryRegion.js"></script>
+    </body>
+</html>

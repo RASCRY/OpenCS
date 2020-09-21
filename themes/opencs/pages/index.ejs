@@ -1,0 +1,35 @@
+<%- include ("../partials/head") %>
+<%- include ("../partials/header") %>
+<div class="hero centre-container hero-big">
+    <div class="vertical-centre">
+        <h1><%= helper.getLocale(locale).whatDoToday %></h1>
+    </div>
+</div>
+<div class="action-strip bg-theme-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 action-title">
+                <h2><%= helper.getLocale(locale).howHelp %></h2>
+            </div>
+            <a href="/clientarea/?locale=en">
+                <div class="col-md action-strip-button">
+                    <i class="far fa-hdd"></i>
+                    <p><%= helper.getLocale(locale).orderServices %></p>
+                </div>
+            </a>
+            <a href="/clientarea/support?locale=en">
+                <div class="col-md action-strip-button">
+                    <i class="fas fa-life-ring"></i>
+                    <p><%= helper.getLocale(locale).support %></p>
+                </div>
+            </a>
+            <a href="/clientarea/?locale=en">
+                <div class="col-md action-strip-button">
+                    <i class="fas fa-columns"></i>
+                    <p><%= helper.getLocale(locale).clientArea %></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<%- include ("../partials/footer") %>

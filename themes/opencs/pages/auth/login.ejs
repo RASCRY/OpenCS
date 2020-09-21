@@ -1,0 +1,44 @@
+<%
+translate = function(lang,item) {
+
+}
+%>
+<%- include ("../../partials/head", {page_title: page_title, company_name: company_name}) %>
+<%- include ("../../partials/header", {page_title: page_title, company_name: company_name}) %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1>Login</h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/">Home</a> / <a class="opencs-breadcrumb" href="/auth/login">Login</a></p>
+        </div>
+    </div>
+</div>
+<div class="login-form">
+    <div class="container">
+        <form class="login-form-element" action="/auth/login" method="POST">
+            <div class="form-group">
+                <label for="emailAddress">Email address</label>
+                <input type="email" class="form-control" id="emailAddressInput" aria-describedby="emailAddress">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="passwordInput">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="staySignedIn">
+                <label class="form-check-label" for="staySignedIn">Remember Me</label>
+            </div>
+            <div class="login-buttons">
+                <button type="submit" class="btn btn-theme">Login</button>
+                <a class="btn btn-secondary" href="/auth/reset/?locale=en">Reset password</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include ("../partials/footer", {email: company_email, year: year}) %>

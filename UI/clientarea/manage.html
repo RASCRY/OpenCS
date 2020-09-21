@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../../themes/opencs/assets/css/main.css">
+        <link rel="stylesheet" href="../../themes/opencs/assets/css/clientarea.css">
+        <title>Client area - {{company_name}}</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div class="branding-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="logo">
+                                    <h2>OpenCS</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-8 header-col-right">
+                                <div class="header-group">
+                                    <div class="dropdown">
+                                        <button class="btn btn-theme dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Language
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">English</a>
+                                            <a class="dropdown-item" href="#">Íslenska</a>
+                                            <a class="dropdown-item" href="#">Norsk</a>
+                                            <a class="dropdown-item" href="#">Macedonian</a>
+                                            <a class="dropdown-item" href="#">Portugese</a>
+                                        </div>
+                                    </div>
+                                    <div class="button">
+                                        <a href="cart" class="btn btn-theme">View cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-area">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-theme">
+                        <div class="container">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="clientarea.html">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown active">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Services
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Your services</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Order a service</a>
+                                            <a class="dropdown-item" href="#">Addons</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="form-inline my-1 my-lg-0">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Hello, {{account}}
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Manage account</a>
+                                                <a class="dropdown-item" href="#">Change password</a>
+                                                <a class="dropdown-item" href="#">Billing details</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Log out</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="hero centre-container hero-small">
+                <div class="vertical-centre">
+                    <h1>Manage service</h1>
+                </div>
+            </div>
+            <div class="opencs-breadcrumbs">
+                <div class="container">
+                    <div class="opencs-breadcrumbs-container">
+                        <p><a class="opencs-breadcrumb" href="clientarea.html">Client area</a> / <a class="opencs-breadcrumb" href="manage.html">Manage service</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="account-home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="card sidecard">
+                                    <div class="card-header">
+                                        <h5 class="card-title no-margin">Overview <button class="float-right collapse-button" data-toggle="collapse" data-target="#info"><i class="fas"></i></button></h5>
+                                    </div>
+                                    <div class="card-body shortcuts collapse show" id="info">
+                                        <a class="shortcut-button shortcut-active" href="#">Information</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card sidecard">
+                                    <div class="card-header">
+                                        <h5 class="card-title no-margin">Actions <button class="float-right collapse-button" data-toggle="collapse" data-target="#shortcuts"><i class="fas"></i></button></h5>
+                                    </div>
+                                    <div class="card-body shortcuts collapse show" id="shortcuts">
+                                        <a class="shortcut-button" href="#">Cancel service <span class="float-right"><i class="fas fa-wrench"></i></span></a>
+                                        <a class="shortcut-button" href="#">Open a ticket <span class="float-right"><i class="fas fa-comments"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="service-info">
+                                        <div class="centre-container">
+                                            <div class="vertical-centre text-center">
+                                                <div class="icon">
+                                                    <i class="fas fa-database"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <h4>VPS 1GB Ram</h4>
+                                                    <h5>VPS's (EU)</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-details">
+                                        <h4>Details:</h4>
+                                        <ul class="ul-clean">
+                                            <li><strong>Registration date</strong>: Sunday, September 20th, 2020</li>
+                                            <li><strong>Recurring amount</strong>: €0.00 EUR</li>
+                                            <li><strong>Billing cycle</strong>: Monthly</li>
+                                            <li><strong>Next due date</strong>: Sunday, September 20th, 2020</li>
+                                            <li><strong>Payment method</strong>: PayPal</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <p>Copyright &copy; 2020 Rascry Limited P.T.C.<br>Registered in the Federal Republic of Arctischia.<br><a href="https://opencs.rascry.org" target="_blank">Website</a> &bull; <a href="mailto:info@rascry.org" target="_blank">info@rascry.org</a></p>
+                    </div>
+                    <div class="col-md footer-logo">
+                        <a href="https://www.opencs.rascry.org/" target="_blank"><img src="../../themes/opencs/assets/img/logo.png" width="100"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="../../themes/opencs/assets/js/jshref.js"></script>
+    </body>
+</html>

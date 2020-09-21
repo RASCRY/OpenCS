@@ -1,0 +1,171 @@
+.account-home {
+    margin-top: 20px;
+}
+
+.account-home .quicklinks {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .account-home .quicklinks {
+        margin: 15px;
+    }
+    .account-home .quicklinks .quicklink:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.account-home .quicklinks .quicklink {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.account-home .quicklinks .quicklink:hover {
+    background-color: #e2e2e2;
+    cursor: pointer;
+}
+
+.account-home .quicklinks .quicklink:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.account-home .quicklinks .quicklink .icon {
+    color: rgb(192, 192, 192);
+    position: absolute;
+    font-size: 2.8rem;
+    top: 6px;
+    right: 12px;
+}
+
+hr.hr-blue {
+    background-color: blue;
+    height: 2px;
+}
+
+hr.hr-green {
+    background-color: green;
+    height: 2px;
+}
+
+hr.hr-red {
+    background-color: red;
+    height: 2px;
+}
+
+hr.hr-yellow {
+    background-color: yellow;
+    height: 2px;
+}
+
+.infocard {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.infocard:not(:first-child) {
+    padding-left: 7.5px;
+}
+
+.infocard:not(:last-child) {
+    padding-right: 7.5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .infocard:not(:first-child) {
+        padding-left: 0px;
+    }
+    
+    .infocard:not(:last-child) {
+        padding-right: 0px;
+    }
+    .services {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.sidecard {
+    margin: 0 15px 15px 15px;
+    width: 100%;
+}
+
+.shortcuts {
+    padding: 0;
+}
+
+.shortcut-button {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(204, 204, 204, 0.322);
+    padding: 8px;
+    color: rgb(71, 71, 71);
+}
+
+.shortcut-button:hover {
+    color: rgb(71, 71, 71);
+    text-decoration: none;
+    background-color: #f3f3f3;
+}
+
+.shortcut-active {
+    background-color: #f3f3f3;
+}
+
+.shortcut-disabled {
+    background-color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+.shortcut-disabled:hover {
+    background-color: #d1d1d1;
+}
+
+.help-search .col-md-12 {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.quiet-link {
+    color: unset;
+}
+
+.service-info {
+    height: 300px;
+    background-color: rgba(0,0,0,.03);
+    margin-bottom: 15px;
+}
+
+.service-info .icon {
+    font-size: 5rem;
+}
+
+.update-form {
+    width: 100%;
+}
+
+.update-form h4:not(:first-child) {
+    margin-top: 15px;
+}
+
+.update-form .login-buttons {
+    margin-top: 15px;
+}
+
+.iti__flag {background-image: url("path/to/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("path/to/flags@2x.png");}
+}
+
+.iti { 
+    width: 100%;
+}
+
+.text-red {
+    color: red;
+}
+
+#progress-container {
+    border-radius: 0 !important;
+}

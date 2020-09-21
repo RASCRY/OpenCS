@@ -1,0 +1,31 @@
+.register-form {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.register-form h4 {
+    margin: 20px 0 0 0;
+}
+
+.form-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.iti__flag {background-image: url("path/to/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("path/to/flags@2x.png");}
+}
+
+.iti { 
+    width: 100%;
+}
+
+.text-red {
+    color: red;
+}
+
+#progress-container {
+    border-radius: 0 !important;
+}
