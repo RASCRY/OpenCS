@@ -5,6 +5,7 @@ dotenv.config()
 //=====================
 // APP SETTINGS
 //=====================
+const env = process.env.APP_ENV || "production"
 const theme = process.env.APP_THEME || "opencs"
 const locale = process.env.APP_LOCALE || "en"
 const port = process.env.APP_PORT || "80"
@@ -26,13 +27,28 @@ function getLocale(locale) {
     }
 }
 
+function getCategories() {
+    let categories = {
+        "1": "minecraft",
+        "2": "vps",
+        "3": "web",
+    };
+
+    for(var category in categories){
+        console.log(category[1]);
+        return category
+    }
+}
+
 // EXPORTS
 module.exports = {
+    env,
     theme,
     locale,
     port,
     companyName,
     companyEmail,
     year,
+    getCategories,
     getLocale
 }
