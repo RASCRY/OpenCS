@@ -16,7 +16,6 @@ app.use('/assets', express.static('themes/' + helper.theme + '/assets')) // Asse
 
 // Homepage
 app.use('/', index); // Index
-app.use('/:locale', index); // Index w/locale
 
 // Authentication
 app.use('/auth/login', auth); // Login

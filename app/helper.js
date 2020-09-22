@@ -1,5 +1,6 @@
 const fs = require('fs');
 const dotenv = require("dotenv");
+const colors = require('colors/safe');
 dotenv.config()
 
 //=====================
@@ -12,7 +13,6 @@ const port = process.env.APP_PORT || "80"
 const companyName = process.env.COMPANY_NAME || "OpenCS"
 const companyEmail = process.env.COMPANY_EMAIL || "email@email.com"
 const year = new Date().getFullYear()
-
 
 // Get locale file
 function getLocale(locale) {
@@ -28,16 +28,7 @@ function getLocale(locale) {
 }
 
 function getCategories() {
-    let categories = {
-        "1": "minecraft",
-        "2": "vps",
-        "3": "web",
-    };
 
-    for(var category in categories){
-        console.log(category[1]);
-        return category
-    }
 }
 
 // EXPORTS
