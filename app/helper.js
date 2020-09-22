@@ -1,17 +1,18 @@
 const fs = require('fs');
 const dotenv = require("dotenv");
+const colors = require('colors/safe');
 dotenv.config()
 
 //=====================
 // APP SETTINGS
 //=====================
+const env = process.env.APP_ENV || "production"
 const theme = process.env.APP_THEME || "opencs"
 const locale = process.env.APP_LOCALE || "en"
 const port = process.env.APP_PORT || "80"
 const companyName = process.env.COMPANY_NAME || "OpenCS"
 const companyEmail = process.env.COMPANY_EMAIL || "email@email.com"
 const year = new Date().getFullYear()
-
 
 // Get locale file
 function getLocale(locale) {
@@ -26,13 +27,19 @@ function getLocale(locale) {
     }
 }
 
+function getCategories() {
+
+}
+
 // EXPORTS
 module.exports = {
+    env,
     theme,
     locale,
     port,
     companyName,
     companyEmail,
     year,
+    getCategories,
     getLocale
 }

@@ -16,12 +16,17 @@ app.use('/assets', express.static('themes/' + helper.theme + '/assets')) // Asse
 
 // Homepage
 app.use('/', index); // Index
-app.use('/:locale', index); // Index w/locale
 
 // Authentication
 app.use('/auth/login', auth); // Login
 app.use('/auth/register', auth); // Register
 
-app.listen(helper.port, function () {
-    console.log("App has started on port: " + helper.port);
-});
+if (helper.env === "debug") {
+    app.listen(helper.port, function () {
+        console.log("DEBUG: App has started on http://127.0.0.1:" + helper.port);
+    });
+} else {
+    app.listen(helper.port, function () {
+        console.log("OpenCS: App has started on port " + helper.port);
+    });
+}
