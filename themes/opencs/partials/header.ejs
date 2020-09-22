@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md">
                         <div class="logo">
-                            <h2><%= company_name%></h2>
+                            <h2><%= company_name %></h2>
                         </div>
                     </div>
                     <div class="col-md-8 header-col-right">
@@ -13,7 +13,7 @@
                             <div class="dropdown">
                                 <button class="btn btn-theme dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Language
+                                    <%= helper.getLocale(locale).language %>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="?locale=en">English</a>
@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <div class="button">
-                                <a href="/cart?locale=<%= locale%>" class="btn btn-theme">View cart</a>
+                                <a href="/cart?locale=<%= locale%>" class="btn btn-theme"><%= helper.getLocale(locale).viewCart %></a>
                             </div>
                         </div>
                     </div>
@@ -47,10 +47,10 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Store
+                                    <%= helper.getLocale(locale).store %>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#all">Browse all</a>
+                                    <a class="dropdown-item" href="#all"><%= helper.getLocale(locale).browseAll %></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#minecraft">Minecraft</a>
                                     <a class="dropdown-item" href="#web">Web</a>
@@ -63,13 +63,13 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Account
+                                        <%= helper.getLocale(locale).account %>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="login.html">Log-in</a>
-                                        <a class="dropdown-item" href="register.html">Register</a>
+                                        <a class="dropdown-item" href="login.html"><%= helper.getLocale(locale).login %></a>
+                                        <a class="dropdown-item" href="register.html"><%= helper.getLocale(locale).register %></a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="reset.html">Forgot password</a>
+                                        <a class="dropdown-item" href="reset.html"><%= helper.getLocale(locale).forgotPass %></a>
                                     </div>
                                 </li>
                             </ul>

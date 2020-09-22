@@ -10,5 +10,7 @@
   "clientArea": "Clientarea",
   "store": "Store",
   "orderServices": "Order Services",
-  "browseAll": "Browse all"
+  "browseAll": "Browse all",
+  "language": "Language",
+  "viewCart": "View cart"
 }
