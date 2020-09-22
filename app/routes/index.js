@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const helper = require("../helper")
+const helper = require("../helper");
 
 router.get('/', function (req, res) {
     const localeVar = req.query.locale || helper.locale;

@@ -19,13 +19,33 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="/assets/js/bootstrap-strength-meter.js"></script>
-<script src="/assets/js/countryRegion.js"></script>
 <script src="/assets/js/intlTelInput.min.js"></script>
-<script src="/assets/js/jshref.js"></script>
-<script src="/assets/js/locale.js"></script>
-<script src="/assets/js/password-score-options.js"></script>
 <script src="/assets/js/pw-score.js"></script>
-<script src="/assets/js/serviceFilter.js"></script>
+<script src="/assets/js/password-score-options.js"></script>
+<script src="/assets/js/bootstrap-strength-meter.js"></script>
+<script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        initialCountry: "is"
+    });
+    //var number = iti.getNumber();
+    $(document).ready(function() {
+        $('#pw').strengthMeter('progressBar', {
+            container: $('#progress-container'),
+            base: 80,
+            hierarchy: {
+                '0': 'progress-bar-danger',
+                '25': 'progress-bar-warning',
+                '50': 'progress-bar-success'
+            },
+            passwordScore: {
+                options: [],
+                append: true
+            }
+        });
+    });
+
+</script>
+<script src="/assets/js/countryRegion.js"></script>
 </body>
 </html>

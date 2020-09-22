@@ -1,4 +1,4 @@
-<%- include ("../partials/head") %>
+<%- include ("../partials/head", { stylesheets: [] }) %>
 <%- include ("../partials/header") %>
 <div class="hero centre-container hero-big">
     <div class="vertical-centre">
@@ -11,19 +11,19 @@
             <div class="col-md-4 action-title">
                 <h2><%= helper.getLocale(locale).howHelp %></h2>
             </div>
-            <a href="/clientarea/?locale=en">
+            <a href="/clientarea/?locale=<%= locale %>">
                 <div class="col-md action-strip-button">
                     <i class="far fa-hdd"></i>
                     <p><%= helper.getLocale(locale).orderServices %></p>
                 </div>
             </a>
-            <a href="/clientarea/support?locale=en">
+            <a href="/clientarea/support?locale=<%= locale %>">
                 <div class="col-md action-strip-button">
                     <i class="fas fa-life-ring"></i>
                     <p><%= helper.getLocale(locale).support %></p>
                 </div>
             </a>
-            <a href="/clientarea/?locale=en">
+            <a href="/clientarea/?locale=<%= locale %>">
                 <div class="col-md action-strip-button">
                     <i class="fas fa-columns"></i>
                     <p><%= helper.getLocale(locale).clientArea %></p>

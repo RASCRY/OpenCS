@@ -1,0 +1,112 @@
+<%
+translate = function(lang,item) {
+
+}
+%>
+<%- include ("../../partials/head", { stylesheets: ["register", "intlTelInput.min"] }) %>
+<%- include ("../../partials/header") %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1><%= helper.getLocale(locale).register %></h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/?locale=<%= locale %>"><%= helper.getLocale(locale).home %></a> / <a class="opencs-breadcrumb" href="/auth/register?locale=<%= locale %>"><%= helper.getLocale(locale).register %></a></p>
+        </div>
+    </div>
+</div>
+<div class="register-form">
+    <div class="container">
+        <form class="form-register" action="auth/register" method="POST">
+            <h4><%= helper.getLocale(locale).personalInformation %></h4>
+            <small><%= helper.getLocale(locale).fieldsMarkedWith %> <span class="text-red">*</span> <%= helper.getLocale(locale).areRequired %></small>
+            <hr>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).fullName %>:</strong><span class="text-red">*</span></label>
+                    <input type="text" name="name" placeholder="John Doe" class="form-control">
+                </div>
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).emailAddress %>:</strong><span class="text-red">*</span></label>
+                    <input type="email" name="Email" placeholder="john@example.com" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).phoneNumber %>:</strong><span class="text-red">*</span></label>
+                    <input type="tel" name="phone" id="phone" placeholder="000 0000 0000" class="form-control">
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <h4><%= helper.getLocale(locale).billingAddress %></h4>
+            <small><%= helper.getLocale(locale).fieldsMarkedWith %> <span class="text-red">*</span> <%= helper.getLocale(locale).areRequired %></small>
+            <hr>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).companyName %></strong></label>
+                    <input type="text" name="company" placeholder="Example S.A.R.L." class="form-control">
+                </div>
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).streetAddress %></strong><span class="text-red">*</span></label>
+                    <input type="text" name="address1" placeholder="1st example st." class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).streetAddress2 %></strong></label>
+                    <input type="text" name="address2" placeholder="2nd example st." class="form-control">
+                </div>
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).city %></strong><span class="text-red">*</span></label>
+                    <input type="text" name="city" placeholder="Example city" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).postcode %></strong><span class="text-red">*</span></label>
+                    <input type="text" name="postcode" placeholder="1BZ2" class="form-control">
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).country %></strong><span class="text-red">*</span></label>
+                    <select class="crs-country form-control" name="country" id="country" data-region-id="region"></select>
+                </div>
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).stateregion %></strong><span class="text-red">*</span></label>
+                    <select class="form-control" id="region" name="region"></select>
+                </div>
+            </div>
+            <h4><%= helper.getLocale(locale).account %></h4>
+            <small><%= helper.getLocale(locale).fieldsMarkedWith %> <span class="text-red">*</span> <%= helper.getLocale(locale).areRequired %></small>
+            <hr>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).password %></strong><span class="text-red">*</span></label>
+                    <input type="password" name="password" placeholder="<%= helper.getLocale(locale).password %>" class="form-control" id="pw">
+                </div>
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).confirmPassword %></strong><span class="text-red">*</span></label>
+                    <input type="password" name="confirm-password" placeholder="<%= helper.getLocale(locale).confirmPassword %>" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label><strong><%= helper.getLocale(locale).passwordStrength %></strong></label>
+                    <div id="progress-container"></div>
+                </div>
+            </div>
+            <div class="login-buttons">
+                <button type="submit" class="btn btn-theme"><%= helper.getLocale(locale).createAccount %></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include ("../../partials/footer") %>

@@ -42,7 +42,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/?locale=<%= locale %>"><%= helper.getLocale(locale).home %> <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -66,10 +66,10 @@
                                         <%= helper.getLocale(locale).account %>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="login.html"><%= helper.getLocale(locale).login %></a>
-                                        <a class="dropdown-item" href="register.html"><%= helper.getLocale(locale).register %></a>
+                                        <a class="dropdown-item" href="/auth/login?locale=<%= locale %>"><%= helper.getLocale(locale).login %></a>
+                                        <a class="dropdown-item" href="/auth/register?locale=<%= locale %>"><%= helper.getLocale(locale).register %></a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="reset.html"><%= helper.getLocale(locale).forgotPass %></a>
+                                        <a class="dropdown-item" href="/auth/reset?locale=<%= locale %>"><%= helper.getLocale(locale).forgotPass %></a>
                                     </div>
                                 </li>
                             </ul>

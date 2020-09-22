@@ -1,4 +1,5 @@
 const express = require("express");
+
 const path = require('path');
 const app = express();
 
@@ -9,17 +10,22 @@ app.set('views', path.join(__dirname, '/themes'));
 // IMPORTS
 const index = require('./app/routes/index.js');
 const auth = require('./app/routes/auth.js');
+const clientarea = require('./app/routes/clientarea.js');
 const helper = require('./app/helper.js');
 
 // ROUTES
 app.use('/assets', express.static('themes/' + helper.theme + '/assets')) // Assets
 
 // Homepage
-app.use('/', index); // Index
+app.get('/', index); // Index
+
+// Clientarea
+app.get('/clientarea', clientarea);
+app.get('/clientarea/:page', clientarea);
 
 // Authentication
-app.use('/auth/login', auth); // Login
-app.use('/auth/register', auth); // Register
+app.get('/auth/login', auth); // Login
+app.get('/auth/register', auth); // Register
 
 if (helper.env === "debug") {
     app.listen(helper.port, function () {
