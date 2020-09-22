@@ -21,7 +21,7 @@ app.get('/', index); // Index
 
 // Clientarea
 app.get('/clientarea', clientarea);
-app.get('/clientarea/:page', clientarea);
+app.get('/clientarea/services', clientarea);
 
 // Authentication
 app.get('/auth/login', auth); // Login

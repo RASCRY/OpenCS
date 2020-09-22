@@ -1,0 +1,130 @@
+<%
+translate = function(lang,item) {
+
+}
+%>
+<%- include ("../../partials/head", { stylesheets: ["clientarea"] }) %>
+<%- include ("../../partials/header") %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1><%= helper.getLocale(locale).welcomeBack %>, {{account}}</h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/clientarea/?locale=<%= locale %>"><%= helper.getLocale(locale).clientArea %></a> / <a class="opencs-breadcrumb" href="/clientarea/?locale=<%= locale %>"><%= helper.getLocale(locale).home %></a></p>
+        </div>
+    </div>
+</div>
+<div class="account-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="card sidecard">
+                        <div class="card-header">
+                            <h5 class="card-title no-margin"><%= helper.getLocale(locale).yourInformation %> <button class="float-right collapse-button" data-toggle="collapse" data-target="#info"><i class="fas"></i></button></h5>
+                        </div>
+                        <div class="card-body collapse show" id="info">
+                            <p class="card-text">
+                                <strong>penis ltd.</strong><br>
+                                penius man<br>
+                                penis street<br>
+                                aaaaaaaaaaaaaaaaaaaaa, Alabama, 1<br>
+                                United States<br>
+                            </p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-theme display-block full-width"><i class="fas fa-pencil-alt"></i> <%= helper.getLocale(locale).changeInformation %></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card sidecard">
+                        <div class="card-header">
+                            <h5 class="card-title no-margin"><%= helper.getLocale(locale).shortcuts %> <button class="float-right collapse-button" data-toggle="collapse" data-target="#shortcuts"><i class="fas"></i></button></h5>
+                        </div>
+                        <div class="card-body shortcuts collapse show" id="shortcuts">
+                            <a class="shortcut-button" href="#"><%= helper.getLocale(locale).orderServices %> <span class="float-right"><i class="fas fa-shopping-cart"></i></span></a>
+                            <a class="shortcut-button" href="#"><%= helper.getLocale(locale).logout %> <span class="float-right"><i class="fas fa-arrow-left"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 quicklinks">
+                <div class="row">
+                    <div class="col-md-3 quicklink" data-href="/clientarea/services?locale=<%= locale %>">
+                        <div class="icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h2>0</h2>
+                        <p><%= helper.getLocale(locale).services %></p>
+                        <hr class="hr-blue">
+                    </div>
+                    <div class="col-md-3 quicklink" data-href="#quotes">
+                        <div class="icon">
+                            <i class="fas fa-file"></i>
+                        </div>
+                        <h2>0</h2>
+                        <p><%= helper.getLocale(locale).quotes %></p>
+                        <hr class="hr-green">
+                    </div>
+                    <div class="col-md-3 quicklink" data-href="#tickets">
+                        <div class="icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h2>0</h2>
+                        <p><%= helper.getLocale(locale).tickets %></p>
+                        <hr class="hr-red">
+                    </div>
+                    <div class="col-md-3 quicklink" data-href="#invoices">
+                        <div class="icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h2>0</h2>
+                        <p><%= helper.getLocale(locale).invoices %></p>
+                        <hr class="hr-yellow">
+                    </div>
+                </div>
+                <div class="row help-search">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button type="submit" class="form-control"><i class="fas fa-search"></i></button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="<%= helper.getLocale(locale).searchKnowledgebase %>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 infocard">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><%= helper.getLocale(locale).yourActiveServices %></h5>
+                            </div>
+                            <div class="card-body">
+                                <p><%= helper.getLocale(locale).noServices %></p>
+                            </div>
+                            <div class="card-footer text-muted"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 infocard">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><%= helper.getLocale(locale).activeSupportTickets %></h5>
+                            </div>
+                            <div class="card-body">
+                                <p><%= helper.getLocale(locale).noTickets %></p>
+                            </div>
+                            <div class="card-footer text-muted"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ("../../partials/footer") %>

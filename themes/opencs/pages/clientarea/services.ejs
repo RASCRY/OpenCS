@@ -1,0 +1,108 @@
+<%
+translate = function(lang,item) {
+
+}
+%>
+<%- include ("../../partials/head", { stylesheets: ["clientarea"] }) %>
+<%- include ("../../partials/header") %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1><%= helper.getLocale(locale).yourProducts %></h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/clientarea?locale=<%= locale %>"><%= helper.getLocale(locale).clientArea %></a> / <a class="opencs-breadcrumb" href="/clientarea/services?locale=<%= locale %>"><%= helper.getLocale(locale).services %></a></p>
+        </div>
+    </div>
+</div>
+<div class="account-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="card sidecard">
+                        <div class="card-header">
+                            <h5 class="card-title no-margin"><%= helper.getLocale(locale).sortBy %> <button class="float-right collapse-button" data-toggle="collapse" data-target="#info"><i class="fas"></i></button></h5>
+                        </div>
+                        <div class="card-body shortcuts collapse show" id="info">
+                            <a class="shortcut-button" href="#filterBy=$all" onclick="filterBy('$all');"><%= helper.getLocale(locale).all %></a>
+                            <a class="shortcut-button" href="#filterBy=$active" onclick="filterBy('$active');"><%= helper.getLocale(locale).active %></a>
+                            <a class="shortcut-button" href="#filterBy=$pending" onclick="filterBy('$pending');"><%= helper.getLocale(locale).pending %></a>
+                            <a class="shortcut-button" href="#filterBy=$suspended" onclick="filterBy('$suspended');"><%= helper.getLocale(locale).suspended %></a>
+                            <a class="shortcut-button" href="#filterBy=$terminated" onclick="filterBy('$terminated');"><%= helper.getLocale(locale).terminated %></a>
+                            <a class="shortcut-button" href="#filterBy=$cancelled" onclick="filterBy('$cancelled');"><%= helper.getLocale(locale).cancelled %></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card sidecard">
+                        <div class="card-header">
+                            <h5 class="card-title no-margin"><%= helper.getLocale(locale).actions %> <button class="float-right collapse-button" data-toggle="collapse" data-target="#shortcuts"><i class="fas"></i></button></h5>
+                        </div>
+                        <div class="card-body shortcuts collapse show" id="shortcuts">
+                            <a class="shortcut-button" href="#"><%= helper.getLocale(locale).placeAnOrder %> <span class="float-right"><i class="fas fa-shopping-cart"></i></span></a>
+                            <a class="shortcut-button" href="#"><%= helper.getLocale(locale).viewAddons %> <span class="float-right"><i class="fas fa-cubes"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 services">
+                <div class="row">
+                    <table class="table">
+                        <thead class="thead-theme">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col"><%= helper.getLocale(locale).name %></th>
+                            <th scope="col"><%= helper.getLocale(locale).pricing %></th>
+                            <th scope="col"><%= helper.getLocale(locale).nextDueDate %></th>
+                            <th scope="col"><%= helper.getLocale(locale).status %></th>
+                        </tr>
+                        </thead>
+                        <tbody id="services-tbody">
+                        <tr class="service-active">
+                            <th scope="row">1</th>
+                            <td><a href="#" class="link-silent">VPS 1GB RAM</a></td>
+                            <td>0.75€ EUR monthly</td>
+                            <td>Sunday, September 20th, 2020</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                        <tr class="service-pending">
+                            <th scope="row">2</th>
+                            <td><a href="#" class="link-silent">VPS 2GB RAM</a></td>
+                            <td>2€ EUR monthly</td>
+                            <td>Sunday, September 20th, 2020</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                        </tr>
+                        <tr class="service-suspended">
+                            <th scope="row">3</th>
+                            <td><a href="#" class="link-silent">VPS 0.5GB RAM</a></td>
+                            <td>0.35€ EUR monthly</td>
+                            <td>Sunday, September 20th, 2020</td>
+                            <td><span class="badge badge-danger">Suspended</span></td>
+                        </tr>
+                        <tr class="service-terminated">
+                            <th scope="row">4</th>
+                            <td><a href="#" class="link-silent">VPS 0.5GB RAM</a></td>
+                            <td>0.35€ EUR monthly</td>
+                            <td>Sunday, September 20th, 2020</td>
+                            <td><span class="badge badge-info">Terminated</span></td>
+                        </tr>
+                        <tr class="service-cancelled">
+                            <th scope="row">5</th>
+                            <td><a href="#" class="link-silent">VPS 0.5GB RAM</a></td>
+                            <td>0.35€ EUR monthly</td>
+                            <td>Sunday, September 20th, 2020</td>
+                            <td><span class="badge badge-secondary">Cancelled</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ("../../partials/footer") %>
