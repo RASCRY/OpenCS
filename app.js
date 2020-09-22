@@ -26,6 +26,7 @@ app.get('/clientarea/services', clientarea);
 // Authentication
 app.get('/auth/login', auth); // Login
 app.get('/auth/register', auth); // Register
+app.get('/auth/reset', auth); // Reset
 
 if (helper.env === "debug") {
     app.listen(helper.port, function () {

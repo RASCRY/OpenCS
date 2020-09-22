@@ -33,5 +33,20 @@ router.get('/auth/register', function (req, res) {
     res.render(helper.theme + "/pages/auth/register", vars);
 });
 
+router.get('/auth/reset', function(req, res) {
+    if(req.user) { res.redirect("/clientarea"); return; }
+
+    const localeVar = req.query.locale || helper.locale;
+    const vars = {
+        page_title: helper.getLocale(localeVar).register,
+        company_name: helper.companyName,
+        company_email: helper.companyEmail,
+        locale: localeVar,
+        helper: helper
+    };
+
+    res.render(helper.theme + "/pages/auth/reset", vars);
+});
+
 
 module.exports = router;
