@@ -1,0 +1,127 @@
+<%- include ("../../partials/head", { stylesheets: ["clientarea", "intlTelInput.min"] }) %>
+<%- include ("../../partials/header") %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1><%= helper.getLocale(locale).manageAccount %></h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/clientarea/?locale=<%= locale %>"><%= helper.getLocale(locale).clientArea %></a> / <a class="opencs-breadcrumb" href="/clientarea/details?locale=<%= locale %>"><%= helper.getLocale(locale).changeInformation %></a></p>
+        </div>
+    </div>
+</div>
+<div class="account-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="card sidecard">
+                        <div class="card-header">
+                            <h5 class="card-title no-margin"><%= helper.getLocale(locale).account %> <button class="float-right collapse-button" data-toggle="collapse" data-target="#info"><i class="fas"></i></button></h5>
+                        </div>
+                        <div class="card-body shortcuts collapse show" id="info">
+                            <a class="shortcut-button shortcut-active" href="details.html#personal-information"><%= helper.getLocale(locale).information %></a>
+                            <a class="shortcut-button" href="details.html#change-password"><%= helper.getLocale(locale).changePassword %></a>
+                            <a class="shortcut-button" href="details.html#billing-address"><%= helper.getLocale(locale).billingAddress %></a>
+                            <a class="shortcut-button" href="#"><%= helper.getLocale(locale).billingDetails %></a>
+                            <a class="shortcut-button" href="#"><%= helper.getLocale(locale).security %></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <form class="update-form" action="auth/register" method="POST">
+                        <h4><%= helper.getLocale(locale).personalInformation %></h4>
+                        <hr>
+                        <div class="form-row" id="personal-information">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).fullName %>:</strong></label>
+                                <input type="text" name="name" placeholder="John Doe" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).emailAddress %>:</strong></label>
+                                <input type="email" name="Email" placeholder="john@example.com" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).phoneNumber %>:</strong></label>
+                                <input type="tel" name="phone" id="phone" placeholder="000 0000 0000" class="form-control">
+                            </div>
+                            <div class="col">
+
+                            </div>
+                        </div>
+                        <h4><%= helper.getLocale(locale).billingAddress %></h4>
+                        <hr>
+                        <div class="form-row" id="billing-address">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).companyName %></strong></label>
+                                <input type="text" name="company" placeholder="Example S.A.R.L." class="form-control">
+                            </div>
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).streetAddress %></strong></label>
+                                <input type="text" name="address1" placeholder="1st example st." class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).streetAddress2 %></strong></label>
+                                <input type="text" name="address2" placeholder="2nd example st." class="form-control">
+                            </div>
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).city %></strong></label>
+                                <input type="text" name="city" placeholder="Example city" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).postcode %></strong></label>
+                                <input type="text" name="postcode" placeholder="1BZ2" class="form-control">
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).country %></strong></label>
+                                <select class="crs-country form-control" name="country" id="country" data-region-id="region"></select>
+                            </div>
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).stateregion %></strong></label>
+                                <select class="form-control" id="region" name="region"></select>
+                            </div>
+                        </div>
+                        <h4><%= helper.getLocale(locale).changePassword %></h4>
+                        <p><%= helper.getLocale(locale).leaveEmptyToNotChange %></p>
+                        <hr>
+                        <div class="form-row" id="change-password">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).password %></strong></label>
+                                <input type="password" name="password" placeholder="Password" class="form-control" id="pw">
+                            </div>
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).confirmPassword %></strong></label>
+                                <input type="password" name="confirm-password" placeholder="<%= helper.getLocale(locale).confirmPassword %>" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label><strong><%= helper.getLocale(locale).passwordStrength %></strong></label>
+                                <div id="progress-container"></div>
+                            </div>
+                        </div>
+                        <div class="login-buttons">
+                            <button type="submit" class="btn btn-theme"><%= helper.getLocale(locale).updateAccount %></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ("../../partials/footer") %>

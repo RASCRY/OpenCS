@@ -19,6 +19,7 @@
   "rememberMe": "Husk meg",
   "resetPassword": "Tilbakestill passord",
   "billingAddress": "Fakturaadresse",
+  "billingDetails": "Fakturadetaljer",
   "companyName": "Firmanavn",
   "personalInformation": "Personlig Informasjon",
   "fullName": "Fullt Navn",
@@ -65,5 +66,10 @@
   "status": "Status",
   "allCategories": "Alle kategorier",
   "buyNow": "Kjøp nå",
-  "order": "Bestill"
+  "order": "Bestill",
+  "changePassword": "Endre passord",
+  "information": "Informasjon",
+  "security": "Sikkerhet",
+  "updateAccount": "Oppdater bruker",
+  "leaveEmptyToNotChange": "La vær tomt for å ikke endre"
 }

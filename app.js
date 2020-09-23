@@ -23,6 +23,7 @@ app.get('/', index); // Index
 // Clientarea
 app.get('/clientarea', clientarea);
 app.get('/clientarea/services', clientarea);
+app.get('/clientarea/details', clientarea);
 
 // Authentication
 app.get('/auth/login', auth); // Login

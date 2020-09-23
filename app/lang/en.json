@@ -19,6 +19,7 @@
   "rememberMe": "Remember Me",
   "resetPassword": "Reset Password",
   "billingAddress": "Billing Address",
+  "billingDetails": "Billing details",
   "companyName": "Company Name",
   "personalInformation": "Personal Information",
   "fullName": "Full Name",
@@ -65,5 +66,10 @@
   "status": "Status",
   "allCategories": "All categories",
   "buyNow": "Buy now",
-  "order": "Order"
+  "order": "Order",
+  "changePassword": "Change password",
+  "information": "Information",
+  "security": "Security",
+  "updateAccount": "Update account",
+  "leaveEmptyToNotChange": "Leave empty to not change"
 }
