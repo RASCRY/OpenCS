@@ -1,0 +1,19 @@
+<%- include("../../partials/head.ejs", { stylesheets: [] }); %>
+<%- include("../../partials/header.ejs"); %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1><%= page_title %> <%= helper.getLocale(locale).services %></h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/?locale=<%= locale %>"><%= helper.getLocale(locale).home %></a> / <a class="opencs-breadcrumb" href="/order/all?locale=<%= locale %>"><%= helper.getLocale(locale).order %></a> / <a class="opencs-breadcrumb" href="/order/<%= page_title.toLowerCase() %>?locale=<%= locale %>"><%= page_title %></a></p>
+        </div>
+    </div>
+</div>
+<div class="products">
+</div>
+
+<%- include("../../partials/footer.ejs"); %>

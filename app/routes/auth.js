@@ -4,9 +4,10 @@ const router = express.Router();
 const helper = require("../helper");
 
 router.get('/auth/login', function (req, res) {
-    if(req.user) { res.redirect("/clientarea"); return; }
-
     const localeVar = req.query.locale || helper.locale;
+
+    if(req.user) { res.redirect("/clientarea/?locale="+localeVar); return; }
+
     const vars = {
         page_title: helper.getLocale(localeVar).login,
         company_name: helper.companyName,
@@ -19,9 +20,10 @@ router.get('/auth/login', function (req, res) {
 });
 
 router.get('/auth/register', function (req, res) {
-    if(req.user) { res.redirect("/clientarea"); return; }
-
     const localeVar = req.query.locale || helper.locale;
+
+    if(req.user) { res.redirect("/clientarea/?locale="+localeVar); return; }
+
     const vars = {
         page_title: helper.getLocale(localeVar).register,
         company_name: helper.companyName,
@@ -34,9 +36,10 @@ router.get('/auth/register', function (req, res) {
 });
 
 router.get('/auth/reset', function(req, res) {
-    if(req.user) { res.redirect("/clientarea"); return; }
-
     const localeVar = req.query.locale || helper.locale;
+
+    if(req.user) { res.redirect("/clientarea/?locale="+localeVar); return; }
+
     const vars = {
         page_title: helper.getLocale(localeVar).register,
         company_name: helper.companyName,

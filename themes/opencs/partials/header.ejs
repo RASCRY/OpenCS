@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <div class="button">
-                                <a href="/cart?locale=<%= locale%>" class="btn btn-theme"><%= helper.getLocale(locale).viewCart %></a>
+                                <a href="/cart?locale=<%= locale %>" class="btn btn-theme"><%= helper.getLocale(locale).viewCart %></a>
                             </div>
                         </div>
                     </div>
@@ -50,11 +50,11 @@
                                     <%= helper.getLocale(locale).store %>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#all"><%= helper.getLocale(locale).browseAll %></a>
+                                    <a class="dropdown-item" href="/order/all?locale=<%= locale %>"><%= helper.getLocale(locale).browseAll %></a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#minecraft">Minecraft</a>
-                                    <a class="dropdown-item" href="#web">Web</a>
-                                    <a class="dropdown-item" href="#cloud">Cloud</a>
+                                    <a class="dropdown-item" href="/order/minecraft?locale=<%= locale %>">Minecraft</a>
+                                    <a class="dropdown-item" href="/order/web?locale=<%= locale %>">Web</a>
+                                    <a class="dropdown-item" href="/order/cloud?locale=<%= locale %>">Cloud</a>
                                 </div>
                             </li>
                         </ul>

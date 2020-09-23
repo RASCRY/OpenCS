@@ -1,0 +1,92 @@
+<%- include("../../partials/head.ejs", { stylesheets: [] }); %>
+<%- include("../../partials/header.ejs"); %>
+
+<div class="hero centre-container hero-small">
+    <div class="vertical-centre">
+        <h1><%= helper.getLocale(locale).allCategories %></h1>
+    </div>
+</div>
+<div class="opencs-breadcrumbs">
+    <div class="container">
+        <div class="opencs-breadcrumbs-container">
+            <p><a class="opencs-breadcrumb" href="/?locale=<%= locale %>"><%= helper.getLocale(locale).home %></a> / <a class="opencs-breadcrumb" href="/order/all?locale=<%= locale %>"><%= helper.getLocale(locale).order %></a> / <a class="opencs-breadcrumb" href="/order/all?locale=<%= locale %>"><%= helper.getLocale(locale).browseAll %></a></p>
+        </div>
+    </div>
+</div>
+<div class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="category">
+                    <h3>Minecraft Budget</h3>
+                    <ul>
+                        <li>Starting at: 5.99€*</li>
+                        <li>Xeon V3 420-69X</li>
+                        <li>EU & US location</li>
+                        <li>Slaves included</li>
+                    </ul>
+                    <small>* + 24% VAT for EU buyers.</small>
+                    <a href="/order/minecraft?locale=<%= locale %>" class="btn btn-secondary buy-button"><%= helper.getLocale(locale).buyNow %></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <h3>Web hosting</h3>
+                    <ul>
+                        <li>Starting at: 0.12€</li>
+                        <li>10GB of space</li>
+                        <li>Unlimited domains*</li>
+                        <li>Unlimited databases*</li>
+                    </ul>
+                    <small>* limited by storage space.</small>
+                    <a href="/order/web?locale=<%= locale %>" class="btn btn-secondary buy-button"><%= helper.getLocale(locale).buyNow %></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <h3>Cloud hosting</h3>
+                    <ul>
+                        <li>AMD Epyc CPU</li>
+                        <li>40GB of space</li>
+                        <li>Finland datacentre</li>
+                        <li>20TB traffic</li>
+                    </ul>
+                    <small>Service provided by Hetzner Online GmbH.</small>
+                    <a href="/order/cloud?locale=<%= locale %>" class="btn btn-secondary buy-button"><%= helper.getLocale(locale).buyNow %></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="category">
+                    <h3>Storage</h3>
+                    <ul>
+                        <li>Starting at: 0.04€/GB*</li>
+                        <li>Xeon V3 420-69X</li>
+                        <li>EU & US location</li>
+                        <li>Slaves included</li>
+                    </ul>
+                    <small>* Price charged monthly per gigabyte of usage.</small>
+                    <a href="/order/storage?locale=<%= locale %>" class="btn btn-secondary buy-button"><%= helper.getLocale(locale).buyNow %></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <h3>Database</h3>
+                    <ul>
+                        <li>Starting at: 1€</li>
+                        <li>100GB of storage</li>
+                        <li>MySQL, MongoDB & JSONHttp</li>
+                        <li>Firewall protection*</li>
+                    </ul>
+                    <small>* Hardware firewall configurable by client.</small>
+                    <a href="/order/database?locale=<%= locale %>" class="btn btn-secondary buy-button"><%= helper.getLocale(locale).buyNow %></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("../../partials/footer.ejs"); %>

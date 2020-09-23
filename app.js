@@ -11,6 +11,7 @@ app.set('views', path.join(__dirname, '/themes'));
 const index = require('./app/routes/index.js');
 const auth = require('./app/routes/auth.js');
 const clientarea = require('./app/routes/clientarea.js');
+const order = require('./app/routes/order.js');
 const helper = require('./app/helper.js');
 
 // ROUTES
@@ -25,8 +26,18 @@ app.get('/clientarea/services', clientarea);
 
 // Authentication
 app.get('/auth/login', auth); // Login
+app.post('/auth/login', auth);
+
 app.get('/auth/register', auth); // Register
+app.post('/auth/register', auth);
+
 app.get('/auth/reset', auth); // Reset
+app.post('/auth/reset', auth);
+
+// Order
+app.get('/order', order);
+app.get('/order/all', order);
+app.get('/order/:category', order);
 
 if (helper.env === "debug") {
     app.listen(helper.port, function () {

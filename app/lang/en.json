@@ -62,5 +62,8 @@
   "name": "Name",
   "pricing": "Pricing",
   "nextDueDate": "Next due date",
-  "status": "Status"
+  "status": "Status",
+  "allCategories": "All categories",
+  "buyNow": "Buy now",
+  "order": "Order"
 }
