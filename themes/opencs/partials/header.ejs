@@ -66,6 +66,7 @@
                                         <%= helper.getLocale(locale).account %>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/clientarea?locale=<%= locale %>"><%= helper.getLocale(locale).clientArea %></a>
                                         <a class="dropdown-item" href="/auth/login?locale=<%= locale %>"><%= helper.getLocale(locale).login %></a>
                                         <a class="dropdown-item" href="/auth/register?locale=<%= locale %>"><%= helper.getLocale(locale).register %></a>
                                         <div class="dropdown-divider"></div>
