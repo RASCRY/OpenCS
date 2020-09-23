@@ -19,6 +19,10 @@ router.get('/auth/login', function (req, res) {
     res.render(helper.theme + "/pages/auth/login", vars);
 });
 
+router.post('/auth/login', function (req, res) {
+
+});
+
 router.get('/auth/register', function (req, res) {
     const localeVar = req.query.locale || helper.locale;
 
