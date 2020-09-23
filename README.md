@@ -1,7 +1,12 @@
-# OpenCS
-OpenCS is a complete, open source and free billing solution that intergrates with existing software like Pterodactyl, Multicraft, cPanel, VestaCP, ISPConfig and many more. With help from the community many more intergrations will be supported over time with 3d party plugins.
+<p align="center"><a href="https://opencs.rascry.org/"><img src="https://opencs.rascry.org/img/branding.png"></a></p>
+
+# About OpenCS
+> **Note:** This is a development repository of OpenCS, if you want to use OpenCS for a production environment please use the [RASCRY Installer](https://github.com/RASCRY/installer).
+
+OpenCS is a complete, open source and free billing solution that integrates with existing software like Pterodactyl, Multicraft, cPanel, VestaCP, ISPConfig and many more. With help from the community many more integration will be supported over time with 3rd party plugins.
 
 # Help us
-Help us with making OpenCS! Send us an email at [info@opencs.rascry.org](mailto:info@opencs.rascry.org). If you'd like to help translate use the [Crowdin](https://crowdin.com/project/opencs) link.
+Help us with making OpenCS! Send us an email at [contribute@opencs.rascry.org](mailto:contribute@opencs.rascry.org). If you'd like to help translate OpenCS, use [Crowdin](https://crowdin.com/project/opencs).
 
-Copyright (C) 2020 [RASCRY Foundation Limited P.T.C.](https://bhk.arctischia.eu/look.php?cname=&cid=329c5cca-8127-4577-99a6-23dc2eb20389)
+# License
+OpenCS is open-sourced software licensed under a [Modified MIT license](LICENSE). beautiful
