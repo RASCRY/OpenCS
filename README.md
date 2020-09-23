@@ -9,4 +9,4 @@ OpenCS is a complete, open source and free billing solution that integrates with
 Help us with making OpenCS! Send us an email at [contribute@opencs.rascry.org](mailto:contribute@opencs.rascry.org). If you'd like to help translate OpenCS, use [Crowdin](https://crowdin.com/project/opencs).
 
 # License
-OpenCS is open-sourced software licensed under a [Modified MIT license](LICENSE). beautiful
+OpenCS is open-sourced software licensed under a [Modified MIT license](LICENSE).
