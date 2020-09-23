@@ -13,7 +13,7 @@ const locale = process.env.APP_LOCALE || "en"
 const port = process.env.APP_PORT || "80"
 const companyName = process.env.COMPANY_NAME || "OpenCS"
 const companyEmail = process.env.COMPANY_EMAIL || "email@email.com"
-const companyKey = process.env.COMPANY_KEY || ""
+const companyKey = process.env.COMPANY_KEY || "dear-petars-teacher-i-promise-im-not-racist-like-him"
 if (companyKey === "") {
     log("error", "Company Key is empty!");
 }
