@@ -20,7 +20,22 @@ router.get('/auth/login', function (req, res) {
 });
 
 router.post('/auth/login', function (req, res) {
+    /*const email = req.body;
+    const password = req.body;
 
+    if (username && password) {
+        if (email == "tester@test.com" && password == "tester") {
+                req.user.loggedin = true;
+                req.user.fname = "Tester";
+                req.user.lname = "Tester";
+                res.redirect('/home');
+        } else {
+            res.redirect('/auth/login');
+        }
+        res.end();
+    } else {
+        res.redirect('/login');
+    }*/
 });
 
 router.get('/auth/register', function (req, res) {

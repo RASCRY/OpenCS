@@ -1,11 +1,13 @@
+const bodyParser = require('body-parser');
 const express = require("express");
-
 const path = require('path');
 const app = express();
 
 // MODULES CONFIG
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/themes'));
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // IMPORTS
 const index = require('./app/routes/index.js');
